@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: mypool
+  name: abhishek-thakur-pool
   #vmImage : ubuntu-latest
 
 steps:
