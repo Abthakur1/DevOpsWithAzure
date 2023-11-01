@@ -6,8 +6,14 @@
 trigger:
 - main
 
-pool:
-  name: abhishek-thakur-pool
+pool: abhishek-thakur-pool
+strategy:
+  matrix:
+    Python36:
+      python.version: '3.6'
+    Python37:
+      python.version: '3.7'
+  #name: abhishek-thakur-po#ol
   #vmImage : ubuntu-latest
 
 steps:
