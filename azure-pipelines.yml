@@ -21,3 +21,13 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+    
+- task: CopyFiles@2
+  inputs:
+    Contents: '**/*.war'
+    TargetFolder: 'C:\agent\_work\1\a'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'C:\agent\_work\1\a'
+    ArtifactName: 'warfile'
+    publishLocation: 'Container'
